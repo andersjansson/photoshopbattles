@@ -1,0 +1,430 @@
+/*=================================================================================================================================== 
+ #Import Base
+======================================================================================================================================*/
+@import 'base.less';
+
+/*=================================================================================================================================== 
+ #Header
+======================================================================================================================================*/
+
+#header{
+	position: relative;
+	margin: 0 auto;
+	max-width: 747px;
+	width: 100%;
+	height: 100px;
+	margin-top: 20px;
+	background: @main-color;
+	font-size: 1.4em;
+	text-align: center;
+
+	#logo{
+		padding: 20px 0 0 0;
+		h1{
+			color: #000;
+			font-family: @heading-font;
+			font-size: 3em;
+		}
+	}
+}
+
+.white{color: #fff;}
+
+/*=================================================================================================================================== 
+ #Navigation
+======================================================================================================================================*/
+#navigation-wrap{
+	#navigation_main{
+		display: block;
+		ul{
+			li{
+				float: left;
+				padding: 0 10px 0 10px;
+				a{
+					font-family: @nav-font;
+				}
+			}
+		}
+	}
+
+	#navigation_login{
+		float: right;
+		display: block;
+		ul{
+			li{
+				float: left;
+				padding: 0 10px 0px 10px;
+				a{
+					font-family: @nav-font;
+				}
+			}
+		}
+	}
+
+	.active{
+		color: lighten(@link-color, 18%);
+	}
+}
+
+/*=================================================================================================================================== 
+ #Content
+======================================================================================================================================*/
+
+#content-wrap{
+	position: relative;
+	clear: both;
+	max-width: 687px;
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
+#heading{
+	position: absolute;
+	left: 0px; top: 10px;
+	background: #000;
+	padding: 10px 40px 5px 10px;
+	min-width: 200px;
+	z-index: 100;
+}
+
+#content{
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	padding: 60px 20px 20px 20px;
+	max-width: 647px;
+	border: solid black 1px;
+	background: #fff;
+	.box-shadow(0,0,40px, #868686);
+}
+
+#user{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+
+	.avatar{
+		float: left;
+		max-width: 152px;
+		img{
+			width: 152px;
+			height: 152px;
+			border: solid black 1px;
+			.box-shadow(0,0,10px, #868686);
+		}
+	}
+
+	.user-info{
+		float: left;
+		padding:10px 0 0 20px;
+		min-width: 200px;
+		max-width: 450px;
+		
+		.username{
+			font-size: 1.5em;
+		}
+
+		.info{
+		}
+	}
+
+	#change-avatar{
+		
+	}
+	
+
+	#profile-posts-container{
+		clear: both;
+		width: 100%;
+		padding-top: 20px;
+
+
+		#profile-posts-menu{
+			
+			ul{
+				width: 100%;
+				float: left;
+				border-bottom: solid 1px @link-color;
+			}
+			li{
+				display: inline-block;
+				margin: 20px 0px -1px 10px;
+				border: solid 1px @link-color;
+				
+				&.active{
+					border-bottom: solid 1px white;
+				}
+
+				a{
+					padding: 0 5px 0 5px;
+				}
+			}
+		}
+	}
+	
+}
+
+.todo{
+	list-style-type: circle;
+}
+
+.form{
+	p{
+		padding: 0;
+		margin: 0 0 0 0;
+	}
+	textarea{
+		-webkit-box-shadow: inset 0 0 8px #868686;
+		box-shadow: inset 0 0 8px #868686;
+		
+		background: #fff;
+	}
+	input{
+		margin-bottom: 10px;
+	}
+
+	.form-error{
+		color: red;
+	}
+}
+
+.post{
+	position: relative;
+	clear: both;
+	margin-top: 10px;
+	max-height: 80px;
+	overflow: hidden;
+
+	.voting-wrap{
+		float: left;
+		height: 80px;
+		display: table;
+		padding: 6px 8px 0 0;
+	}
+
+	.voting{
+		max-width: 26px;
+		
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+
+		span{
+			font-size: 1.2em;
+
+			&.score{
+				font-size: 1.2em;
+				margin-bottom: 12px;
+			}
+			&.icon-arrow-up, &.icon-arrow-down{
+				&:hover{cursor: pointer;}
+			}
+			&.orange{color: orange;}
+			&.blue{color: blue;}
+		}
+	}
+
+	img{
+		float: left;
+		width: 80px;
+		height: 80px;
+		border: solid black 1px;
+		.box-shadow(0,0,10px, #868686);
+	}
+
+	h3{
+		font-size: 1.36em;
+		color: @text-color;
+
+	}
+	.post-info{
+		float: left;
+		margin-left: 10px;
+		min-width: 400px;
+		max-width: 460px;
+	}
+	
+}
+
+#view-top-container{
+	img{
+		border: solid black 1px;
+		.box-shadow(0,0,50px, #868686);
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+}
+#view-info{
+	padding-top: 20px;
+	.voting-wrap{
+		float: left;
+		display: table;
+		padding: 6px 8px 0 0;
+	}
+	p.title{
+		padding-top: 5px;
+		font-size: 1.618em;
+		span{
+			font-size: 0.618em;
+		}
+	}
+	.voting{
+		text-align: center;
+
+		span{
+			font-size: 1.2em;
+
+			&.score{
+				font-size: 1.2em;
+				margin-bottom: 12px;
+			}
+			&.icon-arrow-up, &.icon-arrow-down{
+				&:hover{cursor: pointer;}
+			}
+			&.orange{color: orange;}
+			&.blue{color: blue;}
+		}
+	}
+}
+#comments{
+	.comment{
+		border-top: solid black 1px;
+		padding-top: 20px;
+		p{
+			line-height: 0.2em;
+		}
+	}	
+}
+
+
+#paging{
+	margin-top: 20px;
+	text-align: center;
+	
+	span{
+		margin: 0 10px 0 10px;
+
+		&.float-left{
+			position: absolute;
+			bottom: 20px;
+			left: 0px;
+		}
+		&.float-right{
+			position: absolute;
+			bottom: 20px;
+			right: 0px;
+		}
+	}
+
+}
+
+.error{color: red;}
+.invisible{display: none;}
+/*=================================================================================================================================== 
+ #Footer
+======================================================================================================================================*/
+
+#footer{
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+}
+
+/*=================================================================================================================================== 
+ #Import Forms & buttons
+======================================================================================================================================*/
+@font-face
+{
+	font-family: "Impact";
+	src: url(../fonts/impact.ttf);
+}
+
+/*=================================================================================================================================== 
+ #MediaQ
+======================================================================================================================================*/
+
+/* första brytpunkten */
+@media only screen and (max-width: 748px) {
+	#header{
+		margin-top: 0;
+
+		#logo{
+			
+			h1{
+				font-size: 2.7em;
+			}
+		}
+	}
+
+	.post{
+		h3{
+			font-size: 1.3em;
+		}
+		.post-info{
+			float: none;
+		}
+	}
+}
+
+/* andra brytpunkten */
+@media only screen and (max-width: 524px) {
+	#header{
+		height: 80px;
+		#logo{
+			h1{
+				font-size: 1.8em;
+			}
+		}
+		/*#navigation-wrap{
+			display: none;
+		}*/
+	}
+	#content-wrap{
+		.user-info{
+			min-width: 524px;
+			border-top: solid gray 1px;
+			padding-left: 10px;
+			margin-top: 10px;
+		}
+	}
+
+	#paging{
+	span{
+		&.float-left{
+			display: none;
+		}
+		&.float-right{
+			display: none;
+		}
+	}
+
+}
+
+}
+
+
+/* Smaller than 1200 (devices and browsers) */
+@media only screen and (max-width: 1199px) { }
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 979px) { }
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) { }
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) { }
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) { }
+
+/*=================================================================================================================================== 
+ #Retina displays
+======================================================================================================================================*/
+@media(-webkit-min-device-pixel-ratio: 2) { }
+
+
+
